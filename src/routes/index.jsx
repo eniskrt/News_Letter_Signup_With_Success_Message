@@ -10,12 +10,14 @@ const AppRouter = () => {
 
   return (
     <BrowserRouter>
+      <main>
         <Container className="main-container">
             <Routes>
                 <Route path='/' element={<MainCard setEmail={setEmail}/>}/>
                 <Route path='/success' element={<SuccessCard email={email}/>}/>
             </Routes>
         </Container>
+        </main>
     </BrowserRouter>
   )
 }
