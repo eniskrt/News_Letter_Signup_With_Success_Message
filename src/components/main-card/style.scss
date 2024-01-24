@@ -1,0 +1,108 @@
+$tomato: hsl(4, 100%, 67%);
+$darkSlateGrey: hsl(234, 29%, 20%);
+$charcoalGrey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+.main-card{
+    padding: 1rem;
+    border-radius: 30px!important;
+
+    .card-body{
+        padding: 1rem 2rem;
+
+        h1{
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: $charcoalGrey;
+        }
+
+        p{
+            color: $darkSlateGrey;
+            font-size: 16px;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+
+            &>li::before{
+                content: "";
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                background-size: cover;
+                background-image: url("../../assets/images/icon-success.svg");
+                background-repeat: no-repeat;
+                margin-right: 1rem;
+                background-position: center center;
+                vertical-align: middle;
+            }
+
+            li{
+                color: $darkSlateGrey;
+                line-height: 2rem;
+            }
+
+        }//end of ul
+
+        .form{
+            width: 100%;
+
+            .group{
+                width: 100%;
+                position: relative;
+
+                .label{
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $darkSlateGrey;
+                }
+
+                input{
+                    padding: 0.8rem;
+                    margin-bottom: 1rem;
+                    box-shadow: none;
+
+                    &::placeholder{
+                        color: $grey;
+                    }
+
+                }
+                .was-validated .form-control:invalid, .form-control.is-invalid{
+                    background-image: none;
+                    border-color: $tomato;
+                    background-color: #FFE8E6;
+                    color: $tomato!important;
+                    font-weight: 500;
+                }
+
+                .feedback{
+                    position: absolute;
+                    top: -5px;
+                    right: -250px;
+                    color: $tomato;
+                    font-weight: 600;
+                }
+            }
+
+            button{
+                width: 100%;
+                padding: 0.8rem;
+                font-family: inherit!important;
+                background-color: $darkSlateGrey;
+                border: none;
+
+                &:hover{
+                    background: linear-gradient(90deg,#FF5379,#FE634E)!important;
+                }
+            }
+        }
+
+    }//end of card-body
+
+    img{
+        height: 100%;
+    }
+}

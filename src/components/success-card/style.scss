@@ -1,0 +1,43 @@
+@use "../../style.scss" as s;
+
+.success{
+    max-width: 350px;
+    border-radius: 30px!important;
+    padding: 1rem;
+
+    img{
+        width: 45px;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+    
+    h1{
+        font-weight: 700;
+        color:s.$darkSlateGrey ;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        color:s.$charcoalGrey;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+
+        span{
+            font-weight: 500;
+        }
+
+    }
+
+    button{
+        background-color: s.$darkSlateGrey;
+        border: none;
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 14px;
+
+        &:hover{
+            background: linear-gradient(90deg,#FF5379,#FE634E)!important;
+        }
+    }
+}
